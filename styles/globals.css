@@ -15,4 +15,9 @@ a {
 
 * {
   box-sizing: border-box;
+  background-color: black;
+}
+
+.style-sidebar-tabs:hover {
+  background-color: black;
 }
