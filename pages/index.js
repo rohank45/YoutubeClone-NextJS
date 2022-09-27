@@ -17,8 +17,8 @@ const index = () => {
       maxResults: "50",
     },
     headers: {
-      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_GET_ALL_VIDEOS_KEY,
-      "X-RapidAPI-Host": process.env.NEXT_PUBLIC_GET_ALL_VIDEOS_HOST,
+      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_GET_KEY,
+      "X-RapidAPI-Host": process.env.NEXT_PUBLIC_GET_HOST,
     },
   };
 
@@ -41,7 +41,7 @@ const index = () => {
       </Head>
 
       <PageLayout activeLink="/">
-        <VideoCard data={allVideosData} />
+        <VideoCard data={allVideosData} flexDirection={"row"} />
       </PageLayout>
     </div>
   );

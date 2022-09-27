@@ -21,3 +21,23 @@ a {
 .style-sidebar-tabs:hover {
   background-color: black;
 }
+
+.react-player {
+  height: 77vh !important;
+  width: 100% !important;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+}
+
+@media screen and (max-width: 900px) {
+  .react-player {
+    height: 40vh !important;
+    width: 100% !important;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+}
