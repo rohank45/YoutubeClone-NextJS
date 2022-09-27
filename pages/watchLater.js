@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import PageLayout from "../lib/components/PageLayout";
+import WatchLaterVideoCard from "../lib/components/WatchLaterVideoCard";
 
 const watchLater = () => {
-  return <PageLayout activeLink="/watchLater">watchLater</PageLayout>;
+  const [watchLaterVideosData, setWatchLaterVideosData] = useState([]);
+
+  return (
+    <PageLayout activeLink="/watchLater">
+      <WatchLaterVideoCard data={watchLaterVideosData} />
+    </PageLayout>
+  );
 };
 
 export default watchLater;
