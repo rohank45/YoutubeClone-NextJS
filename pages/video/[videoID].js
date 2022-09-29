@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Loader from "../../lib/common/Loader";
@@ -11,6 +11,7 @@ const videoID = () => {
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
   const router = useRouter();
   const { height, width } = useWindowSize();
+  // const contextValue = useContext(SidebarContext);
   const [loading, setLoading] = useState(false);
   const [videoDetails, setVideoDetails] = useState(null);
   const [allVideosData, setAllsetVideosData] = useState([]);
@@ -62,7 +63,12 @@ const videoID = () => {
         >
           <div
             style={{
-              width: width < 900 ? "100%" : "76%",
+              width:
+                width < 900
+                  ? "95%"
+                  : width > 900 && width < 1400
+                  ? "68%"
+                  : "80%",
               position: "relative",
               left: 0,
               top: 0,
@@ -89,11 +95,9 @@ const videoID = () => {
 
           <div
             style={{
-              width: width < 900 ? "100%" : "20%",
               position: "relative",
-              right: 0,
               top: 0,
-              marginRight: 30,
+              right: 10,
               marginTop: width < 900 && width > 500 ? 30 : 0,
             }}
           >

@@ -33,7 +33,7 @@ a {
 
 @media screen and (max-width: 900px) {
   .react-player {
-    height: 40vh !important;
+    height: 30vh !important;
     width: 100% !important;
     position: relative;
     left: 0;
